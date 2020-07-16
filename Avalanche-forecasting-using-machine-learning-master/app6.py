@@ -6,7 +6,7 @@ model = load('ava.save')
 
 @app.route('/')
 def home():
-    return render_template('index1.html')
+    return render_template('index.html')
 
 @app.route('/y_predict',methods=['POST'])
 def y_predict():
@@ -33,7 +33,7 @@ def y_predict():
     elif(prediction[0]==2):
         output="moderate"
     
-    return render_template('index1.html', prediction_text='Avalanche chances are {}'.format(output))
+    return render_template('index.html', prediction_text='Avalanche chances are {}'.format(output))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
